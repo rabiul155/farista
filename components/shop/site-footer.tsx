@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ContactLinks } from "@/components/shop/contact-links";
 import { site } from "@/lib/site";
+import brandImage from "@/public/farista-brand.png";
 
 export function SiteFooter() {
   return (
@@ -9,10 +10,8 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 text-sm sm:grid-cols-3">
         <div className="flex flex-col gap-2">
           <Image
-            src="/farista-brand.png"
+            src={brandImage}
             alt={site.name}
-            width={2000}
-            height={2000}
             className="h-auto w-44 rounded-md"
           />
           <p className="text-muted-foreground">{site.description}</p>
